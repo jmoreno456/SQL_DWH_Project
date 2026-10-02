@@ -2,7 +2,7 @@
 
 ### Business Questions:
 1. How has a team's performance changed from season to season?
-2. Which teams have the best home records?
+2. Which teams have the best home records across all seasons?
 3. Which teams have the best attacking and defensive records?
 4. How important is home advantage?
 5. How does shot generation relate to match results?

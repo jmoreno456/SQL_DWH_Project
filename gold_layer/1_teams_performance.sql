@@ -1,3 +1,4 @@
+-- Question 1: How has a team's performance changed from season to season?
 -- team's performance season by season
 -- create home team perspective
 -- create away team perspective
@@ -81,4 +82,6 @@ SELECT
 FROM
     gold.team_season_stats
 WHERE
-    team = 'Real Madrid';
+    team = 'Real Madrid'
+ORDER BY
+    season;
