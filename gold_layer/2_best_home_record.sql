@@ -61,11 +61,25 @@ FROM
     gold.team_home_stats;
 
 -- perform analysis
+-- get ranking of number 1 best home team
+-- only show ranked number 1 for each season
 SELECT
     *
 FROM
-    gold.team_home_stats
+    (
+        SELECT
+            *,
+            RANK() OVER (
+                PARTITION BY
+                    season
+                ORDER BY
+                    home_win_percentage DESC,
+                    home_points DESC
+            ) AS rank
+        FROM
+            gold.team_home_stats
+    ) ranked_teams
+WHERE
+    rank = 1
 ORDER BY
-    season,
-    home_win_percentage DESC,
-    home_points DESC;
+    season;

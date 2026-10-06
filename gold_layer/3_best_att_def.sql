@@ -39,22 +39,3 @@ WHERE
     )
 ORDER BY
     season;
-
--- find the best attacking and defensive team (goal difference)
-SELECT
-    season,
-    team,
-    goal_difference
-FROM
-    gold.team_season_stats
-WHERE
-    goal_difference = (
-        SELECT
-            MAX(goal_difference)
-        FROM
-            gold.team_season_stats AS subquery
-        WHERE
-            subquery.season = gold.team_season_stats.season
-    )
-ORDER BY
-    season;
