@@ -59,11 +59,46 @@ SELECT
 FROM
     gold.laliga_shot_generation;
 
--- perform analysis
+-- perform analysis for 22-23 season
 SELECT
     *
 FROM
     gold.laliga_shot_generation
+WHERE
+    season = '2022-2023'
+ORDER BY
+    season,
+    total_shots DESC;
+
+-- 23-24 season analysis
+SELECT
+    *
+FROM
+    gold.laliga_shot_generation
+WHERE
+    season = '2023-2024'
+ORDER BY
+    season,
+    total_shots DESC;
+
+-- 24-25 season analysis
+SELECT
+    *
+FROM
+    gold.laliga_shot_generation
+WHERE
+    season = '2024-2025'
+ORDER BY
+    season,
+    total_shots DESC;
+
+-- 25-26 season analysis
+SELECT
+    *
+FROM
+    gold.laliga_shot_generation
+WHERE
+    season = '2025-2026'
 ORDER BY
     season,
     total_shots DESC;
