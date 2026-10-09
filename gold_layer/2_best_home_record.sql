@@ -58,7 +58,11 @@ GROUP BY
 SELECT
     *
 FROM
-    gold.team_home_stats;
+    gold.team_home_stats
+ORDER BY
+    season,
+    home_win_percentage DESC,
+    home_points DESC;
 
 -- perform analysis
 -- get ranking of number 1 best home team

@@ -52,12 +52,16 @@ FROM
     ) AS combined
 GROUP BY
     season,
-    team
-    -- test the view
+    team;
+
+-- test the view
 SELECT
     *
 FROM
-    gold.laliga_shot_generation;
+    gold.laliga_shot_generation
+ORDER BY
+    season,
+    total_shots DESC;
 
 -- perform analysis for 22-23 season
 SELECT
